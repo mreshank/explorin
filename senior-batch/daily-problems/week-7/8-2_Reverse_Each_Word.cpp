@@ -11,27 +11,29 @@
 #include <cstring>
 using namespace std;
 
-
 string reverseEachWord(string input) 
 {
     // Append a space to the end of the input string so that the last word is also reversed.
-    input += " ";
+    input = " " + input;
 
     // Declare variables to store the reversed string and the temporary string.
     string str = "", temp = "";
 
-    // Iterate over the characters in the input string.
-    for (int i = 0; i < input.length(); i++) 
+    // Iterate over the characters in the input string from the back.
+    for (int i = input.length() - 1; i >= 0; i--) 
     {
         // If the current character is not a space, add it to the temporary string.
         if (input[i] != ' ') 
         {
-            temp = input[i] + temp;
+            temp += input[i];
         }
         // If the current character is a space, reverse the temporary string and add it to the reversed string.
         else 
         {
-            str += temp + " ";
+            // Add the reversed temporary string to the reversed string.
+            str = temp + " " + str;
+
+            // Clear the temporary string.
             temp = "";
         }
     }
