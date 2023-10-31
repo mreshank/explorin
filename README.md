@@ -1,5 +1,5 @@
 # Explorin X Psiace
-Hai bas jo hai ... 
+
 This repository contains all of my code solutions for the problems and challenges I have completed on Explorin. This includes solutions to Daily Problems, Weekly Contests, and other learning materials.
 
 
